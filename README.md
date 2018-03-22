@@ -11,6 +11,21 @@
 * Java 1.7 JDK
 * Maven 
 
+Getting the code
+----------------
+
+    cd $HOME
+    git clone https://github.com/<username>/foundry-nlp-enhancer.git
+    cd $HOME/foundry-nlp-enhancer
+
+After that expand the UMLS2015 lookup table (which is to big for Github in uncompressed format) locally
+
+    gzip -d $HOME/foundry-nlp-enhancer/src/main/resources/edu/uth/clamp/nlp/ner/UMLS2015.txt.gz
+
+Building
+--------
+
+
 
 1. The NER code is in edu.uth.biocaddie.ner package in NLP_NER.java.
 
