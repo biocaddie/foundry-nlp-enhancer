@@ -144,6 +144,9 @@ consumers:
          status: nlp_enhanced
 ```
 
+Notes
+-----
+
 1. The NER code is in edu.uth.biocaddie.ner package in NLP_NER.java.
 
 2. To run the program, you need to have NER supporting data and CLAMP resource files in the system.
