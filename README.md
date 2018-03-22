@@ -1,4 +1,4 @@
-# NLP processing program
+# NLP enhancer plugin for Foundry-ES pipeline management system 
 
 ## Prerequisites
 
@@ -31,10 +31,18 @@ Building
 Deployment
 ----------
 
-The enhancer plugin jar and third patry dependencies needs to be copied to the Foundry-ES plugin and lib directories
+The enhancer plugin jar and third patry dependencies needs to be copied to the Foundry-ES plugin and lib directories.
+The Foundry-ES plugin directory is specified in the `config.yml` file under `Foundry-ES/bin` directory. E.g.
+
+    pluginDir: "/var/data/foundry-es/foundry_plugins/plugins"
+
+The corresponding lib directory for the above plugin directory would be `/var/data/foundry-es/foundry_plugins/lib`.
+
+Copy the  `$HOME/foundry-nlp-enhancer/target/NLP_processor_010517-1.0.jar` file to the `pluginDir` specified in the 
+`config.yml` file. 
 
 
-The following third paty libraries nneds to be under Foundry-ES plugin lib directory
+The following third party libraries needs to be under Foundry-ES plugin lib directory;
 
     bioc-1.0.1.jar
     cleartk-eval-2.0.0.jar
@@ -101,6 +109,40 @@ The following third paty libraries nneds to be under Foundry-ES plugin lib direc
     uimaj-tools-2.4.0.jar
 
 
+Foundry-ES pipeline setup
+-------------------------
+
+The NLP enhancer can be configured to be used in the pipeline via the `config.yml` file. An example 
+configuration is shown below;
+
+
+```YAML
+pluginDir: "/var/data/foundry-es/foundry_plugins/plugins"
+database:
+    host: "<mongo-db-host>"
+    port: 27017
+    db: biocaddie
+    collection: records
+mq:
+    brokerURL: "tcp://localhost:61616?wireFormat.maxInactivityDuration=0"
+
+workflow:
+    "BioCaddie Workflow":
+        - transform
+        - nlp
+
+consumers:
+    - uuidGen:
+         class: org.neuinfo.foundry.consumers.jms.consumers.plugins.DocIDAssigner
+         status: id_assigned
+    - transform:
+         class: org.neuinfo.foundry.consumers.jms.consumers.plugins.TransformationEnhancer
+         status: transformed
+         addResourceInfo: false
+    - nlp:
+         class: edu.uth.biocaddie.ner.BiocaddieNLPEnhancer
+         status: nlp_enhanced
+```
 
 1. The NER code is in edu.uth.biocaddie.ner package in NLP_NER.java.
 
