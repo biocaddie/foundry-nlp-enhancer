@@ -1,0 +1,286 @@
+package edu.uth.biocaddie.ner;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import edu.uth.clamp.nlp.ner.NESpan;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectWriter;
+import org.codehaus.jackson.util.DefaultPrettyPrinter;
+
+
+public class NLP_NER {
+    /*
+     * extract the string to be processed from the Json file given field
+     * for example, given "dataItem", outString will concatenate content in "dataItem.title" and
+     * "dataItem.description" fields
+     */
+    public static String extract_text(String filepath, String field) {
+        JSONParser parser = new JSONParser();
+        String outString = "";
+        try {
+            String text = read_file(filepath, StandardCharsets.UTF_8);
+            Object obj = parser.parse(text);
+            JSONObject jsonObject = (JSONObject) obj;
+            JSONObject source = (JSONObject) jsonObject.get("_source");
+            JSONObject dataItem = (JSONObject) source.get(field);//change to different repository
+            String title = (String) dataItem.get("title");
+            String description = (String) dataItem.get("description");
+            outString = title + '\n' + description;
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return outString;
+    }
+
+    public static String read_file(String path, Charset encoding)
+            throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(path));
+        return new String(encoded, encoding);
+
+    }
+
+    /*
+     * construct NLP field to a json object
+     */
+    @SuppressWarnings("unchecked")
+    public static void construct_json_fields(JSONObject jo, String fieldName, ArrayList<String> valueList) {
+        JSONArray list = new JSONArray();
+        for (String value : valueList) {
+            list.add(value);
+        }
+        jo.put(fieldName, list);
+
+    }
+
+    /*
+     * add NLP fields to json file and write to outDir
+     */
+    @SuppressWarnings("unchecked")
+    public static void write_json_file(String oldJsonFile, JSONObject newFields, String outDir)
+            throws FileNotFoundException, IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        Object obj = parser.parse(new FileReader(oldJsonFile));
+        JSONObject jsonObject = (JSONObject) obj;
+        JSONObject source = (JSONObject) jsonObject.get("_source");
+        source.put("NLP_fields", newFields);
+        try {
+            String[] tempfile = oldJsonFile.split("/");
+            String filename = tempfile[tempfile.length - 1];
+            String outPath = outDir + filename;
+            ObjectMapper mapper = new ObjectMapper();
+            ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+            writer.writeValue(new File(outPath), jsonObject);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /*
+     * given gene NER, convert it to Gene ID using GNAT API
+     */
+    public static String convert_gene_ID(String str)
+            throws UnsupportedEncodingException {
+        str = str.replaceAll("%", " ");
+        str = str.replaceAll("#", " ");
+
+        str = URLEncoder.encode(str, "UTF-8");
+
+        String urlString = "http://textmining.ls.manchester.ac.uk:8081/?text=" + str + "&species=9606,10090,7227";
+        JavaUrlConnectionReader urlReader = new JavaUrlConnectionReader();
+        String result = "";
+        try {
+            String output = urlReader.getUrlContents(urlString);
+            String[] lines = output.split("\n");
+
+            for (int i = 0; i < lines.length; i++) {
+                String[] words = lines[i].split("\t");
+                if (words.length < 8) {
+                    continue;
+                }
+                if (result.length() > 0) {
+                    result = result + ";" + words[4];
+                } else {
+                    result = words[4];
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println("gene ID problem");
+        }
+        return result;
+
+
+    }
+
+    /*
+     * dirPath: input folder which has json files
+     * outDir: output dir for new json files
+     * field: field name where title and description field is in ,e.g. dataset, dataItem, etc.
+     */
+    public static void NLP_process_json_files(String dirPath, String outDir, String field)
+            throws ClassNotFoundException, InstantiationException, NoSuchMethodException,
+            IllegalAccessException, InvocationTargetException, Exception {
+        File dir = new File(dirPath);
+        File listDir[] = dir.listFiles();
+
+        // Initialization
+        BioNERecognizer recognizer = (BioNERecognizer) BioNERecognizer
+                .getDefault();
+        BigIntegerDictionary BPdict = (BigIntegerDictionary) BigIntegerDictionary.getDefault();
+
+        // process for files in the dirPath
+        for (int i = 0; i < listDir.length; i++) {
+            //if(i%100==0){
+            System.out.println(i);
+            //}
+            String filename = listDir[i].getName();
+
+            if (filename.equals(".DS_Store")) {
+                continue;
+            }
+
+            String text = extract_text(listDir[i].toString(), field);
+            NESpan[] Ret = recognizer.recognize(text);
+            ArrayList<String> BP = BigIntegerDictionary.unique_NER_BP(BPdict, text);
+            ArrayList<String> mesh = MetaMapLite.get_mesh(text);
+
+            ArrayList<String> Genes = new ArrayList<String>();
+            ArrayList<String> Disease = new ArrayList<String>();
+            ArrayList<String> Chemical = new ArrayList<String>();
+            ArrayList<String> GOIDs = new ArrayList<String>();
+            ArrayList<String> DiseaseIDs = new ArrayList<String>();
+            ArrayList<String> ChemicalIDs = new ArrayList<String>();
+            ArrayList<String> GeneIDs = new ArrayList<String>();
+            ArrayList<String> Meshterms = new ArrayList<String>();
+            ArrayList<String> MeshIDs = new ArrayList<String>();
+            ArrayList<String> CLs = new ArrayList<String>();
+
+            for (NESpan span : Ret) {
+                if (span.sem().equals("Disease")) {
+                    String newDisease = text.substring(span.start(), span.end()).toLowerCase();
+                    if (!Disease.contains(newDisease)) {
+                        Disease.add(newDisease);
+                        ArrayList<String> DiseaseID = MetaMapLite.get_cuiID(newDisease);
+                        for (int k = 0; k < DiseaseID.size(); k++) {
+                            DiseaseIDs.add(DiseaseID.get(k));
+                        }
+                    }
+                }
+                if (span.sem().equals("Chemical")) {
+
+                    String newChemical = text.substring(span.start(), span.end()).toLowerCase();
+
+                    if (Genes.contains(newChemical)) {
+                        continue;
+                    }
+                    if (!Chemical.contains(newChemical)) {
+                        Chemical.add(newChemical);
+                        ArrayList<String> ChemicalID = MetaMapLite.get_cuiID(newChemical);
+                        for (int k = 0; k < ChemicalID.size(); k++) {
+                            ChemicalIDs.add(ChemicalID.get(k));
+                        }
+
+                    }
+                }
+                if (span.sem().equals("GENE")) {
+                    String newGene = text.substring(span.start(), span.end()).toLowerCase();
+                    if (!Genes.contains(newGene)) {
+                        Genes.add(newGene);
+                        // IBO turn off gene id
+                        //String GeneID = convert_gene_ID(newGene);
+                        String GeneID = "";
+                        String[] GeneList = GeneID.split(";");
+                        for (String Geneid : GeneList) {
+                            if (Geneid.length() > 0) {
+                                GeneIDs.add(Geneid);
+                            }
+                        }
+                    }
+                }
+                if (span.sem().equals("CL")) {
+                    String newCL = text.substring(span.start(), span.end()).toLowerCase();
+                    if (!CLs.contains(newCL)) {
+                        CLs.add(newCL);
+
+                    }
+                }
+            }
+
+            for (String word : BP) {
+
+                String GOID = BigIntegerDictionary.convert_to_GOID(word);
+                if (GOID != null) {
+
+                    GOID.length();
+                    if (GOID.length() > 0) {
+                        GOIDs.add(GOID);
+                    }
+                }
+            }
+            for (String me : mesh) {
+                String[] a = me.split("\\|");
+                Meshterms.add(a[1]);
+                MeshIDs.add(a[0]);
+            }
+
+            JSONObject jo = new JSONObject();
+            construct_json_fields(jo, "gene", Genes);
+            construct_json_fields(jo, "GeneID", GeneIDs);
+            construct_json_fields(jo, "BP", BP);
+            construct_json_fields(jo, "GOID", GOIDs);
+            construct_json_fields(jo, "Chemical", Chemical);
+            construct_json_fields(jo, "ChemicalID", ChemicalIDs);
+            construct_json_fields(jo, "Disease", Disease);
+            construct_json_fields(jo, "DiseaseID", DiseaseIDs);
+            construct_json_fields(jo, "Meshterm", Meshterms);
+            construct_json_fields(jo, "MeshID", MeshIDs);
+            construct_json_fields(jo, "CellLine", CLs);
+
+
+            try {
+
+                write_json_file(listDir[i].toString(), jo, outDir);
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    public static void main(String[] args) throws Exception, IOException, ClassNotFoundException, InstantiationException,
+            NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        //input folder which has json files
+        String dirPath = "input_example/";
+        String field = "dataItem";
+        String outDir = "output/";
+
+        NLP_process_json_files(dirPath, outDir, field);
+
+
+    }
+}

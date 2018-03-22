@@ -1,0 +1,770 @@
+source and reliability	source_and_reliability
+identifying information	identifying_information
+identify information	identifying_information
+activity	activity
+procedural complications	complications
+procedural complication	complications
+studies performed	laboratory_and_radiology_data
+study perform	laboratory_and_radiology_data
+laboratory data	laboratory_and_radiology_data
+icd10 code	icd_code
+diagnostic procedure	laboratory_and_radiology_data
+plan / recommendations	plan
+plan recommendation	plan
+hpi / interval history	history_present_illness
+hpi interval history	history_present_illness
+available pertinent laboratory x ray findings	laboratory_and_radiology_data
+available pertinent laboratory x ray finding	laboratory_and_radiology_data
+note	comment
+discharge activity	discharge_activity
+followup	follow_up
+recommendations and treatment plan	plan
+recommendation and treatment plan	plan
+recommendation treatment plan	plan
+identifying data/chief complaint	chief_complaint
+identify data chief complaint	chief_complaint
+procedure note	procedure_note
+laboratory and study data	laboratory_and_radiology_data
+laboratory study data	laboratory_and_radiology_data
+source	history_source
+technical _ quality	technical_quality
+laboratory data / diagnostic studies	laboratory_and_radiology_data
+laboratory data diagnostic study	laboratory_and_radiology_data
+past medical history and review of systems	past_medical_history
+past medical history and review of system	past_medical_history
+past medical history review system	past_medical_history
+analysis of identified problems	analysis
+analysis of identify problem	analysis
+analysis identify problem	analysis
+H & P	general_history_and_physical
+h p	general_history_and_physical
+diagnostics	laboratory_and_radiology_data
+operative procedural	operative_procedural
+study data	laboratory_and_radiology_data
+operative	operative_procedural
+p	plan
+livingwill _ codestatus	livingwill_codestatus
+systems review	review_of_systems
+system review	review_of_systems
+date _ time	date_time
+laboratory and radiographic studies	laboratory_and_radiology_data
+laboratory and radiographic study	laboratory_and_radiology_data
+laboratory radiographic study	laboratory_and_radiology_data
+drugs	medications
+drug	medications
+post cardioversion plans	plan
+post cardioversion plan	plan
+icd code	icd_code
+clinic visit	clinic_note
+reason for admission	chief_complaint
+reason admission	chief_complaint
+clinical data	laboratory_and_radiology_data
+historian	history_source
+imaging procedure	laboratory_and_radiology_data
+MEDICATIONS / HERBS / SUPPLEMENTS	medications
+medication herb supplement	medications
+past medical problems	past_medical_history
+past medical problem	past_medical_history
+references	references
+reference	references
+findings	findings
+finding	findings
+history of past illness	past_medical_history
+history past illness	past_medical_history
+patient hpi	history_present_illness
+addition or correction to the admission note	changes_to_admission_note
+addition correction admission note	changes_to_admission_note
+ros _ pmh _ familyhx _ socialhx	ros_pmh_familyhx_socialhx
+ros_pmh_familyhx_socialhx	ros_pmh_familyhx_socialhx
+changes_to_admission_note	changes_to_admission_note
+changes to admission note	changes_to_admission_note
+Therapeutic Plans	plan
+therapeutic plan	plan
+summary of present illness	history_present_illness
+summary present illness	history_present_illness
+ancillary studies	laboratory_and_radiology_data
+ancillary study	laboratory_and_radiology_data
+provider	providers
+procedures	procedures
+procedure	procedures
+Lab and radiological results	laboratory_and_radiology_data
+lab and radiological result	laboratory_and_radiology_data
+lab radiological result	laboratory_and_radiology_data
+code	code_status
+chief complaint	chief_complaint
+procedure note	procedure_note
+clinic note	clinic_note
+comparison	laboratory_and_radiology_data
+reason for consultation	reason_for_consult
+reason consultation	reason_for_consult
+reason for exam	reason_for_study
+reason exam	reason_for_study
+Medications administered	medications
+medication administer	medications
+type of procedure	type_of_procedure
+type procedure	type_of_procedure
+history / physical examination	history_present_illness
+history physical examination	history_present_illness
+patient info	identifying_information
+discharge followup plans	discharge_followup
+discharge followup plan	discharge_followup
+patient identification	identifying_information
+available lab and x ray results	laboratory_and_radiology_data
+available lab and x ray result	laboratory_and_radiology_data
+available lab x ray result	laboratory_and_radiology_data
+transport history	transport_history
+DS	discharge_summary
+ds	discharge_summary
+recommendation	plan
+past medical history	past_medical_history
+Plan / suggestions/disposition	plan
+plan suggestion disposition	plan
+transport	transport_history
+chief concern	chief_complaint
+course in the emergency department	hospital_course
+course emergency department	hospital_course
+transport history	transport_history
+procedural	procedures
+ros pmh familyhx socialhx	ros_pmh_familyhx_socialhx
+ro pmh familyhx socialhx	ros_pmh_familyhx_socialhx
+discharge plans and follow-up	discharge_followup
+discharge plan and follow up	discharge_followup
+discharge plan follow up	discharge_followup
+functional status	functional_status
+comment	comment
+impression / recommendations	assessment_and_plan
+impression recommendation	assessment_and_plan
+results	laboratory_and_radiology_data
+result	laboratory_and_radiology_data
+clinical history	history_present_illness
+past medical history and physical examination	past_medical_history_and_physical_examination
+past medical history physical examination	past_medical_history_and_physical_examination
+plan	plan
+previous medical history	past_medical_history
+physical examination as compared to admission	physical_examination
+physical examination as compare to admission	physical_examination
+physical examination as compare admission	physical_examination
+past history	past_medical_history
+a / p	assessment_and_plan
+a p	assessment_and_plan
+impression and recommendation	assessment_and_plan
+impression recommendation	assessment_and_plan
+providers by role	providers_by_role
+risk factors	risk_factors
+risk factor	risk_factors
+impression / plan	assessment_and_plan
+impression plan	assessment_and_plan
+diagnosis	diagnoses
+discharge diagnoses	diagnoses
+recommendations	plan
+recommendation	plan
+birth data	birth_history
+history of functional status	functional_status
+history functional status	functional_status
+lab imaging	laboratory_and_radiology_data
+admission_date	admission_date
+type of study	type_of_procedure
+type study	type_of_procedure
+followup care plan	follow_up
+laboratory and radiology data	laboratory_and_radiology_data
+present illness	history_present_illness
+discharge summary	discharge_summary
+indications for procedure	reason_for_study
+indication for procedure	reason_for_study
+indication procedure	reason_for_study
+providers by type	providers_by_type
+indication	history_present_illness
+date & time	date_time
+date time	date_time
+laboratory data / radiology	laboratory_and_radiology_data
+laboratory data radiology	laboratory_and_radiology_data
+additions and corrections to admission note	changes_to_admission_note
+addition and correction to admission note	changes_to_admission_note
+addition correction admission note	changes_to_admission_note
+studies	laboratory_and_radiology_data
+study	laboratory_and_radiology_data
+health status	health_status
+external examination	physical_examination
+obj	objective_data
+Reason for consult / questions	reason_for_consult
+reason for consult question	reason_for_consult
+reason consult question	reason_for_consult
+author	author
+hpi	history_present_illness
+closing	closing
+close	closing
+in clinical history	history_present_illness
+clinical history	history_present_illness
+functional_status	functional_status
+patient summary	patient_summary
+reason for hospitalization	chief_complaint
+reason hospitalization	chief_complaint
+Informed consent was obtained for and included	consent
+informed consent be obtain for and included	consent
+informed consent be obtain included	consent
+comparison imaging	laboratory_and_radiology_data
+history of symptoms & diseases	review_of_systems
+history of symptom disease	review_of_systems
+history symptom disease	review_of_systems
+id / cc	chief_complaint
+id cc	chief_complaint
+illnesses	past_medical_history
+illness	past_medical_history
+study	laboratory_and_radiology_data
+carbon copy	carbon_copy
+description	description
+time spent	total_time
+time spend	total_time
+other results	laboratory_and_radiology_data
+other result	laboratory_and_radiology_data
+living will	advanced_directives
+live will	advanced_directives
+history source	history_source
+clinical impression	assessment
+plan and discussion	assessment_and_plan
+plan discussion	assessment_and_plan
+icd9 code	icd_code
+assessment_and_plan	assessment_and_plan
+physical exam compared admission	physical_examination
+physical exam compare admission	physical_examination
+available lab and x-ray results	laboratory_and_radiology_data
+available lab and x ray result	laboratory_and_radiology_data
+available lab x ray result	laboratory_and_radiology_data
+additions and / or corrections to the admission note	changes_to_admission_note
+addition and or correction to the admission note	changes_to_admission_note
+addition correction admission note	changes_to_admission_note
+Allergic Disorder History	allergies_and_adverse_reactions
+allergic disorder history	allergies_and_adverse_reactions
+providers by type	providers_by_type
+provider by type	providers_by_type
+provider type	providers_by_type
+family / social history / physical examination	family_and_social_history
+family social history physical examination	family_and_social_history
+plan and recommendations	plan
+plan and recommendation	plan
+plan recommendation	plan
+cpt	cpt_code
+house staff attestation	house_staff_attestation
+impression and recommendations	assessment_and_plan
+impression and recommendation	assessment_and_plan
+impression recommendation	assessment_and_plan
+clinical history / indications	history_present_illness
+clinical history indication	history_present_illness
+reason for visit	chief_complaint
+reason visit	chief_complaint
+pmh	past_medical_history
+findings at surgery	findings
+finding at surgery	findings
+finding surgery	findings
+allergy	allergies_and_adverse_reactions
+discharge planning	discharge_followup
+discharge plan	discharge_followup
+copies summary to	carbon_copy
+copy summary to	carbon_copy
+copy summary	carbon_copy
+progress note	progress_note
+patient summary	patient_summary
+hematology / oncology history	past_medical_history
+hematology oncology history	past_medical_history
+follow up	follow_up
+issues briefly as following	history_present_illness
+issue briefly as following	history_present_illness
+physical exam	physical_examination
+cc	chief_complaint
+cc	carbon_copy
+risk factors	risk_factors
+diagnoses	diagnoses
+diagnosis	diagnoses
+diet	diet
+followup appointments	follow_up
+followup appointment	follow_up
+meds	medications
+med	medications
+history	history_present_illness
+discharge followup	discharge_followup
+consent	consent
+reason for study	reason_for_study
+order	orders
+data	laboratory_and_radiology_data
+here for a chief complaint of	chief_complaint
+here a chief complaint	chief_complaint
+discussion	summary
+discharge instructions	discharge_instructions
+discharge instruction	discharge_instructions
+diagnostic findings	findings
+diagnostic finding	findings
+review of symptoms and diseases	review_of_systems
+review of symptom and disease	review_of_systems
+review symptom disease	review_of_systems
+pmhx	past_medical_history
+ros	review_of_systems
+counts	counts
+count	counts
+plans	plan
+plan	plan
+assessment	assessment
+history of general health	past_medical_history
+history general health	past_medical_history
+AVAILABLE PERTINENT LABORATORY & X - RAY FINDINGS	laboratory_and_radiology_data
+available pertinent laboratory x ray finding	laboratory_and_radiology_data
+medications	medications
+medication	medications
+physical exam as compared to admission	physical_examination
+physical exam as compare to admission	physical_examination
+physical exam as compare admission	physical_examination
+exam	physical_examination
+analysis of admitting problems	analysis
+analysis of admit problem	analysis
+analysis admit problem	analysis
+physical examination	physical_examination
+recommendations / plan	plan
+recommendation plan	plan
+current medical problems	history_present_illness
+current medical problem	history_present_illness
+discharge summary	discharge_summary
+assessment and recommendations	assessment_and_plan
+assessment and recommendation	assessment_and_plan
+assessment recommendation	assessment_and_plan
+technique	technique
+return to clinic	follow_up
+return clinic	follow_up
+ALLERGIES / ADVERSE REACTIONS	allergies_and_adverse_reactions
+allergy adverse reaction	allergies_and_adverse_reactions
+providers	providers
+provider	providers
+indications	history_present_illness
+indication	history_present_illness
+livingwill codestatus	livingwill_codestatus
+identification	identifying_information
+birth_history	birth_history
+lab and imaging	laboratory_and_radiology_data
+lab imaging	laboratory_and_radiology_data
+discharge_followup	discharge_followup
+testing	laboratory_and_radiology_data
+test	laboratory_and_radiology_data
+discharge_activity	discharge_activity
+I confirmed the ROS Past History Family History and Social History	ros_pmh_familyhx_socialhx
+i confirm the ro past history family history and social history	ros_pmh_familyhx_socialhx
+i confirm ro past history family history social history	ros_pmh_familyhx_socialhx
+past medical history / past surgical history	past_medical_history
+past medical history past surgical history	past_medical_history
+health screening	health_maintenance
+patient history	patient_history
+My key findings of this patient ' s physical exam are	physical_examination
+my key finding of this patient physical exam be	physical_examination
+my key finding this patient physical exam be	physical_examination
+total time	total_time
+laboratory and radiology findings	laboratory_and_radiology_data
+laboratory and radiology finding	laboratory_and_radiology_data
+laboratory radiology finding	laboratory_and_radiology_data
+recommended reading	recommended_reading
+recommend reading	recommended_reading
+family and social history	family_and_social_history
+recommended reading	recommended_reading
+report	report
+discharge problem list	discharge_problem_list
+code status	code_status
+addition and / or correction to admission	changes_to_admission_note
+addition and or correction to admission	changes_to_admission_note
+addition correction admission	changes_to_admission_note
+attending addendum	attending_addendum
+date time	date_time
+discharge instructions	discharge_instructions
+objective	objective_data
+history and physical	general_history_and_physical
+history physical	general_history_and_physical
+procedure	procedures
+type of procedures	type_of_procedure
+type of procedure	type_of_procedure
+type procedure	type_of_procedure
+impression and plan	assessment_and_plan
+impression plan	assessment_and_plan
+problem	problem_list
+admission physical exam	physical_examination
+history obtained from	history_source
+history obtain from	history_source
+history obtain	history_source
+medical problems	past_medical_history
+medical problem	past_medical_history
+attestation	attestation
+advanced directives	advanced_directives
+reason for consult	reason_for_consult
+problem list	problem_list
+reason for study	reason_for_study
+reason study	reason_for_study
+significant past medical history	past_medical_history
+history of major illnesses and injuries	past_medical_history
+history of major illness and injury	past_medical_history
+history major illness injury	past_medical_history
+corrections to admission note	changes_to_admission_note
+correction to admission note	changes_to_admission_note
+correction admission note	changes_to_admission_note
+general history and physical	general_history_and_physical
+personal family social history	family_and_social_history
+patient history	patient_history
+patient history	history_present_illness
+operative notes	operative_notes
+type of procedure	type_of_procedure
+cardiovascular review of systems	review_of_systems
+cardiovascular review of system	review_of_systems
+cardiovascular review system	review_of_systems
+analysis	analysis
+demographics	demographics
+icd code	icd_code
+health care maintenance	health_maintenance
+ed problem	ed_problem
+summary of the cardiopulmonary bypass	summary
+summary cardiopulmonary bypass	summary
+birth history	birth_history
+I examined the patient and confirmed the House Staff ' s Admission Physical Exam	physical_examination
+i examine the patient and confirm the house staff admission physical exam	physical_examination
+i examine patient confirm house staff admission physical exam	physical_examination
+finding	findings
+resuscitation	resuscitation
+pertinent studies	laboratory_and_radiology_data
+pertinent study	laboratory_and_radiology_data
+orders	orders
+order	orders
+HX obtained from	history_source
+hx obtain from	history_source
+hx obtain	history_source
+impression	assessment
+ICD9	icd_code
+icd9	icd_code
+identifying data	identifying_information
+identify data	identifying_information
+total time	total_time
+instructions	instructions
+instruction	instructions
+admission date	admission_date
+operative notes	operative_notes
+operative note	operative_notes
+a & p	assessment_and_plan
+a p	assessment_and_plan
+past med history	past_medical_history
+history of chronic illness	history_present_illness
+history chronic illness	history_present_illness
+operative procedural	operative_procedural
+identification / chief complaint	chief_complaint
+identification chief complaint	chief_complaint
+rtc	follow_up
+premedications	medications
+premedication	medications
+family and social history	family_and_social_history
+family social history	family_and_social_history
+Electronically written and signed by	author
+electronically write and sign by	author
+electronically write sign	author
+allergies and adverse reactions	allergies_and_adverse_reactions
+allergy and adverse reaction	allergies_and_adverse_reactions
+allergy adverse reaction	allergies_and_adverse_reactions
+cardiac review of systems	review_of_systems
+cardiac review of system	review_of_systems
+cardiac review system	review_of_systems
+discharge problem list	discharge_problem_list
+hospital course	hospital_course
+date and time	date_time
+date time	date_time
+past hospitalization history	past_medical_history
+clinical presentation	history_present_illness
+analysis of problem	analysis
+analysis problem	analysis
+followup instructions	follow_up
+followup instruction	follow_up
+follow up at discharge	discharge_followup
+follow up discharge	discharge_followup
+examination on discharge	physical_examination
+examination discharge	physical_examination
+addition correction admission note	changes_to_admission_note
+lab and radiological results	laboratory_and_radiology_data
+lab and radiological result	laboratory_and_radiology_data
+lab radiological result	laboratory_and_radiology_data
+attending attestation	attending_attestation
+ROS / PMH / FAMILY HISTORY / SOCIAL HISTORY	ros_pmh_familyhx_socialhx
+ro pmh family history social history	ros_pmh_familyhx_socialhx
+identification and chief complaint	chief_complaint
+identification chief complaint	chief_complaint
+signed by	author
+sign by	author
+sign	author
+cpt code	cpt_code
+pfsh	family_and_social_history
+problems	problem_list
+problem	problem_list
+laboratory and x - ray data	laboratory_and_radiology_data
+laboratory and x-ray data	laboratory_and_radiology_data
+laboratory and x ray data	laboratory_and_radiology_data
+laboratory x ray data	laboratory_and_radiology_data
+social history / family history/review of systems	review_of_systems
+social history family history review of system	review_of_systems
+social history family history review system	review_of_systems
+feeding and dietary status	diet
+feeding dietary status	diet
+objective data	objective_data
+physicial examination	physical_examination
+laboratory and radiology data	laboratory_and_radiology_data
+laboratory radiology data	laboratory_and_radiology_data
+document types	document_types
+document type	document_types
+premorbid medications	medications
+premorbid medication	medications
+clinic note	clinic_note
+technical quality	technical_quality
+examination on discharge compared to admission	physical_examination
+examination on discharge compare to admission	physical_examination
+examination discharge compare admission	physical_examination
+adverse reactions	allergies_and_adverse_reactions
+adverse reaction	allergies_and_adverse_reactions
+physical examination by organ systems	physical_examination
+physical examination by organ system	physical_examination
+physical examination organ system	physical_examination
+objective data	objective_data
+past medical history / physical examination	past_medical_history_and_physical_examination
+past medical history physical examination	past_medical_history_and_physical_examination
+condition	condition
+problem_list	problem_list
+medical history and general physical examination	general_history_and_physical
+medical history general physical examination	general_history_and_physical
+estimated blood loss	estimated_blood_loss
+estimate blood loss	estimated_blood_loss
+physical findings	physical_examination
+physical finding	physical_examination
+identifying information	identifying_information
+nutrition	diet
+history of present illness	history_present_illness
+history present illness	history_present_illness
+Available Pertinent Laboratory & X-Ray Findings	laboratory_and_radiology_data
+Available Pertinent Laboratory & X - Ray Findings	laboratory_and_radiology_data
+available pertinent laboratory x ray finding	laboratory_and_radiology_data
+medical history	past_medical_history
+summary of cardiopulmonary bypass	summary
+summary cardiopulmonary bypass	summary
+addendum	addendum
+reason for referral	reason_for_consult
+reason referral	reason_for_consult
+issues briefly as follows	history_present_illness
+issue briefly as follow	history_present_illness
+special studies	laboratory_and_radiology_data
+special study	laboratory_and_radiology_data
+providers by role	providers_by_role
+provider by role	providers_by_role
+provider role	providers_by_role
+attending attestation	attending_attestation
+attending addendum	attending_addendum
+preprocedure studies	laboratory_and_radiology_data
+preprocedure study	laboratory_and_radiology_data
+standard coding systems	standard_coding_systems
+standard code system	standard_coding_systems
+history source	history_source
+chief complaint	chief_complaint
+clinical indication	history_present_illness
+carbon copy	carbon_copy
+report status	report_status
+estimated blood loss	estimated_blood_loss
+follow-up appointments ; arrangements for care	follow_up
+follow up appointment arrangement for care	follow_up
+follow up appointment arrangement care	follow_up
+addition and / or correction to the admission note	changes_to_admission_note
+addition and or correction to the admission note	changes_to_admission_note
+addition correction admission note	changes_to_admission_note
+informed consent	consent
+recs	plan
+rec	plan
+diagnostic studies	laboratory_and_radiology_data
+diagnostic study	laboratory_and_radiology_data
+review of systems	review_of_systems
+examination	physical_examination
+SOURCES OF INFORMATION	history_source
+source of information	history_source
+source information	history_source
+summary	summary
+DCS	discharge_summary
+dcs	discharge_summary
+Laboratory or imaging	laboratory_and_radiology_data
+laboratory or imaging	laboratory_and_radiology_data
+laboratory imaging	laboratory_and_radiology_data
+assessment and plan	assessment_and_plan
+assessment plan	assessment_and_plan
+physical exam compare admission	physical_examination
+interpretation	assessment
+consultation_note	consultation_note
+inpatient progress note	progress_note
+comparison_studies	laboratory_and_radiology_data
+medications at vanderbilt	medications
+medication at vanderbilt	medications
+medication vanderbilt	medications
+past medical history and physical examination	past_medical_history_and_physical_examination
+dietary	diet
+Total visit time	total_time
+total visit time	total_time
+data base	data_base
+progress note	progress_note
+follow up	follow_up
+cpt code	cpt_code
+follow - up	follow_up
+follow-up	follow_up
+follow up	follow_up
+health maintenance	health_maintenance
+past medical and surgical history	past_medical_history
+past medical surgical history	past_medical_history
+health maintenance	health_maintenance
+allergies	allergies_and_adverse_reactions
+allergy	allergies_and_adverse_reactions
+reliability	reliability
+comparison studies	laboratory_and_radiology_data
+comparison study	laboratory_and_radiology_data
+indications / findings	findings
+indication finding	findings
+report status	report_status
+general history and physical	general_history_and_physical
+general history physical	general_history_and_physical
+changes to admission note	changes_to_admission_note
+change to admission note	changes_to_admission_note
+change admission note	changes_to_admission_note
+review of systems	review_of_systems
+review of system	review_of_systems
+review system	review_of_systems
+brief medical history	past_medical_history
+complications	complications
+complication	complications
+purpose of study	reason_for_study
+purpose study	reason_for_study
+pe	physical_examination
+health status	health_status
+anesthesia	anesthesia
+attending physician attestation	attending_attestation
+family history and social history	family_and_social_history
+family history social history	family_and_social_history
+diagnostic tests and procedures	laboratory_and_radiology_data
+diagnostic test and procedure	laboratory_and_radiology_data
+diagnostic test procedure	laboratory_and_radiology_data
+eating habits	diet
+eat habit	diet
+sponge count	counts
+source and reliability	source_and_reliability
+source reliability	source_and_reliability
+informant	history_source
+allergies and adverse reactions	allergies_and_adverse_reactions
+Past Medical History / Problem List	past_medical_history
+Past Medical History/Problem List	past_medical_history
+past medical history problem list	past_medical_history
+reason for admission and consultation	chief_complaint
+reason admission consultation	chief_complaint
+history present illness	history_present_illness
+procedures performed during the hospitalization	procedures
+procedure perform during the hospitalization	procedures
+procedure perform during hospitalization	procedures
+past medical issues	past_medical_history
+past medical issue	past_medical_history
+reason for consult	reason_for_consult
+reason consult	reason_for_consult
+past medical history	past_medical_history
+document types	document_types
+assessment / plan	assessment_and_plan
+assessment plan	assessment_and_plan
+consultation note	consultation_note
+procedure performed	procedures
+procedure perform	procedures
+reason for admission / chief complaint	chief_complaint
+reason for admission/chief complaint	chief_complaint
+reason for admission chief complaint	chief_complaint
+reason admission chief complaint	chief_complaint
+house staff attestation	house_staff_attestation
+past medical history / surgical history	past_medical_history
+past medical history surgical history	past_medical_history
+icd10	icd_code
+data base	data_base
+physical examination	physical_examination
+clinical comments	assessment_and_plan
+clinical comment	assessment_and_plan
+hospital course	hospital_course
+code status	code_status
+ed problem	ed_problem
+impression and plans	assessment_and_plan
+impression and plan	assessment_and_plan
+impression plan	assessment_and_plan
+history of the present illness	history_present_illness
+history present illness	history_present_illness
+past infectious history	past_medical_history
+diagnostic impression	findings
+standard coding systems	standard_coding_systems
+written by	author
+write by	author
+write	author
+history of allergies	allergies_and_adverse_reactions
+history of allergy	allergies_and_adverse_reactions
+history allergy	allergies_and_adverse_reactions
+discharge plan	discharge_followup
+past medical history/family history	past_medical_history
+past medical history family history	past_medical_history
+interval history	history_present_illness
+history present illness	history_present_illness
+O	objective_data
+o	objective_data
+history / hospital course	hospital_course
+history hospital course	hospital_course
+Known Significant Medical Diagnoses and Conditions	past_medical_history
+Known Adverse and Allergic Drug Reactions ( if none, enter NKA )	allergies_and_adverse_reactions
+Medications Known to be Prescribed for or Used by the Patient	medications
+Medications Known to be Prescribed for or Used by the Patient ( with dose , route , and frequency )	medications
+Preventive Care interventions ( optional )	health_maintenance
+pt history	patient_history
+reliability	reliability
+providers	providers
+demographics	demographics
+condition	condition
+diagnoses	diagnoses
+procedures	procedures
+diet	diet
+medications	medications
+orders	orders
+instructions	instructions
+activity	activity
+summary	summary
+assessment	assessment
+analysis	analysis
+plan	plan
+findings	findings
+closing	closing
+counts	counts
+technique	technique
+anesthesia	anesthesia
+complications	complications
+description	description
+addendum	addendum
+report	report
+references	references
+attestation	attestation
+author	author
+consent	consent
+comment	comment
+resuscitation	resuscitation
+follow up appointment	follow_up
+additional comments	comment
+TO DO / PLAN	plan
+return to work	return_work
+return work	return_work
+discharge follow-up	discharge_followup
+discharge follow up	discharge_followup
+discharge follow - up	discharge_followup
+PE on admission	physical_examination
+PE on discharge	physical_examination
+admission exam	physical_examination
+admit exam	physical_examination
+to do plan	plan
+to do	plan
+exam on admission	physical_examination
+significant problems	problem_list
+significant problem	problem_list
+most recent medication	medications
+brief hospital course	hospital_course
+admission examination	physical_examination
+advanced directives	advanced_directives
+followup plan	discharge_followup
+initial impression	assessment
+indication for surgery	reason_for_study
+admission PE	physical_examination
+family history	family_history
+social history	social_history
+discharge medications	medications
+discharge medication	medications

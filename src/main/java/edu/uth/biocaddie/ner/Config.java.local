@@ -1,0 +1,30 @@
+package edu.uth.biocaddie.ner;
+
+
+public class Config {
+
+    public Config() {
+        // TODO Auto-generated constructor stub
+    }
+
+    //for NER Task
+
+    // public static String NERDir="/Users/xchen2/Documents/BioCADDIE/NLP_process_Java_Project/src/main/resources/edu/uth/biocaddie/ner/";
+    public static String NERDir = "/var/data/biocaddie/NLP_process_supporting_data/";
+
+    public static String NERModelDir;
+
+    public static String NERTraininCorpusDir;
+    public static String NERTMPDir = NERDir + "tmp/";
+
+
+    public static void setNERTmpDir(String nertmpdir) {
+        NERTMPDir = nertmpdir;
+    }
+
+    public static void setNERDir(String nerdir) {
+        NERModelDir = nerdir;
+        NERTMPDir = nerdir + "tmp/";
+    }
+
+}
