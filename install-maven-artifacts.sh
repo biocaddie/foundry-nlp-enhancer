@@ -39,3 +39,10 @@ mvn install:install-file  -Dfile=lib/irutils-2.0-SNAPSHOT.jar \
                           -DartifactId=irutils \
                           -Dversion=2.0-SNAPSHOT \
                           -Dpackaging=jar
+
+mvn install:install-file  -Dfile=lib/clamp-1.0.jar \
+                          -DgroupId=edu.uth \
+                          -DartifactId=clamp \
+                          -Dversion=1.0 \
+                          -Dpackaging=jar
+

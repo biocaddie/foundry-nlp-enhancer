@@ -25,6 +25,12 @@ After that expand the UMLS2015 lookup table (which is too big for Github in unco
 Building
 --------
 
+First, you need to install local packages in the `lib` directory to your local Maven repository by running
+
+    sh ./install-maven-artifacts.sh
+
+After that run the following to build the Foundry NLP enhancer    
+
     sh ./build_jar.sh
 
 

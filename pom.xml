@@ -337,6 +337,11 @@
             <artifactId>foundry-es-consumer-plugin-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>edu.uth</groupId>
+            <artifactId>clamp</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
 
